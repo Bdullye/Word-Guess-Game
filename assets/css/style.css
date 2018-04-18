@@ -1,0 +1,9 @@
+h1 {
+    color:red;
+}
+
+body {
+    background-image: url("../images/LOTR.jpeg");
+    width:100%;
+    height:100%;
+}
