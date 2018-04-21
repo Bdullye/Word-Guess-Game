@@ -67,4 +67,4 @@
   //code # of guesses remaining for the user.
   //show letters already guessed.
   //After the user wins/loses the game should automatically choose another word and make the user play it.
-  
+  //updated portfolio file:///Users/brandondullye/Desktop/class/hw/hw2/Bootstrap-Portfolio/portfolio.html
