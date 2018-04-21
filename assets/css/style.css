@@ -1,9 +1,29 @@
 h1 {
     color:red;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+    font-family: fantasy;
+}
+
+h2 {
+    text-align: center;
+    font-family: fantasy;
+    color:black;
+    text-decoration: underline;
 }
 
 body {
-    background-image: url("../images/LOTR.jpeg");
-    width:100%;
-    height:100%;
+    background-image: url("../images/LOTR.jpeg"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.guessMe {
+    color:white;
+    text-align: center;
+    font-size: 70px;
+    text-decoration-color: red;
 }

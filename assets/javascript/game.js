@@ -5,14 +5,16 @@
   //"press any key to get started!"
   window.onload = function() {
 
-      var wordBank = ["froto", "gandalf", "gimli", "troll", "hobbit"];
+      var wordBank = ["frodo", "gandalf", "gimli", "troll", "hobbit"];
       var status = false;
         var wordGuess = "";
         var wins = 0;
         var losses = 0;
         var userGuess = '';
         var progress="";
+        var progressLetter = "";
 
+        
       document.onkeypress = function(event) {
 
         // Determines which key was pressed.
@@ -20,28 +22,29 @@
         if (!status){
             status = true;
             progress="";
-            wordGuess = wordBank[0]; //use math.random to get a random option
+            wordGuess = wordBank[Math.floor(Math.random()*[wordBank.length])]; //use math.random to get a random option
             for (var i = 0; i < wordGuess.length; i++){
                 progress += "_ ";
             }
-            document.querySelector(".guessMe").innerHTML = progress;
+            
         } else {
             letterCheck(userGuess, wordGuess, progress);
         }
-  
-          // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
-        //   var html =
-        //     "<p>You chose: " + userGuess + "</p>" +
-        //     "<p>wins: " + wins + "</p>" +
-        //     "<p>losses: " + losses + "</p>" ;
-  
+
+        var html = 
+        "<p>You chose: " + userGuess + "</p>" +
+        "<p>wins: " + wins + "</p>" +
+        "<p>losses: " + losses + "</p>" ;
+
+       //document.querySelector(".guessMe").innerHTML = html;
+        // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
         //   // Set the inner HTML contents of the #game div to our html string
         //   document.querySelector("#game").innerHTML = html;
         };
   };
 
   function letterCheck(userGuess, wordGuess, progress) {
-    progress = progress.split();
+    progressLetter = progress.split();
     if (wordGuess.includes(userGuess)) {
         // letter was found in word
         alert("word contains letter");
@@ -51,14 +54,15 @@
         while (pos !== -1) {
           progress[pos] = userGuess;
           pos = wordGuess.indexOf(userGuess, pos + 1);
+          progress = progress.join;
         }
         document.querySelector(".guessMe").innerHTML = progress;        
     } else {
         // letter not in word
-        alert('not found');
+        alert('No dice!');
     }
-  }
-  //code to show number of wins.
+    //progress = progress.join("");
+  };
   //As the user guesses the correct letters, reveal them: m a d o _ _ a.
   //code # of guesses remaining for the user.
   //show letters already guessed.
