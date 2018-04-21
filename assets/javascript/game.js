@@ -36,7 +36,7 @@
         "<p>wins: " + wins + "</p>" +
         "<p>losses: " + losses + "</p>" ;
 
-       //document.querySelector(".guessMe").innerHTML = html;
+       document.querySelector(".guessMe").innerHTML = html;
         // Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
         //   // Set the inner HTML contents of the #game div to our html string
         //   document.querySelector("#game").innerHTML = html;
